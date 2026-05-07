@@ -1,0 +1,266 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #051547 0%, transparent 1%),
+    radial-gradient(circle at center, #051547 0%, transparent 1.5%),
+    radial-gradient(circle at center, #051547 0%, transparent 100%),
+    radial-gradient(circle at center, #000000 0%, transparent 100%),
+    radial-gradient(circle at center, #000000 0%, transparent 100%),
+    radial-gradient(circle at center, #000000 0%, transparent 100%),
+    #000000;
+  color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   LAYOUT & UTILITIES
+========================= */
+.section {
+  padding: 80px 0;
+  border-bottom: 1px solid #ffffff54;
+  background-size: 150px 1px;
+  background-repeat: repeat-x;
+
+  mask-image: linear-gradient(
+    to right, 
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  
+  -webkit-mask-image: linear-gradient(
+    to right, transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.dev-name {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+#about {
+  padding-top: 0;
+  margin-top: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+.about-subtitle {
+  color: #aaa;
+  margin-bottom: 35px;
+  line-height: 2;
+  font-size: 16.5px;
+}
+
+/* =========================
+   MOBILE STYLES
+========================= */
+@media (max-width: 768px) {
+
+  .section {
+    mask-image: none;
+    -webkit-mask-image: none;
+    padding: 40px 0;
+  }
+
+  .hero-mobile-wrapper {
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .hero-mobile-wrapper .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: block !important;
+  }
+
+  .nav-header {
+    justify-content: space-between;
+  }
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 5px;
+  z-index: 10;
+}
+
+/* Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(5, 21, 71, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1000;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+/* Overlay Header */
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+}
+
+.profile-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.profile-role {
+  font-size: 0.7rem;
+  color: #aaa;
+  letter-spacing: 1.5px;
+}
+
+.close-menu-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Overlay Links */
+.nav-label {
+  font-size: 0.75rem;
+  color: #aaa;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.overlay-links .nav-item {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.overlay-links .nav-item:active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}

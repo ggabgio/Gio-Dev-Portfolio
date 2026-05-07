@@ -11,6 +11,7 @@ import photoshop from "../assets/icons/photoshop.svg"
 import premiere from "../assets/icons/premiere.svg"
 import canva from "../assets/icons/canva.svg"
 import csharp from "../assets/icons/csharp.svg"
+import '../styles/TechStack.css';
 
 
 const techs = [

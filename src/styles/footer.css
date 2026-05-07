@@ -1,0 +1,89 @@
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  padding: 45px 0;
+  border-top: 1px solid #ffffff54;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left */
+.footer-left .cv-button {
+  padding: 10px 16px;
+  border: 1px solid #ffffff76;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.footer-left .cv-button:hover {
+  background: rgba(23, 10, 169, 0.478);
+}
+
+/* Center */
+.footer-center {
+  font-size: 1rem;
+  color: #aaa;
+  text-align: center;
+}
+
+/* Right */
+.footer-right {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-right a {
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-right a::before {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: rgba(38, 117, 244, 0.726); 
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-right a:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.5);
+}
+
+.footer-right a:hover::before {
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

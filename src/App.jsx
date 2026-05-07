@@ -3,6 +3,8 @@ import Section from "./components/Section";
 import ProjectCard from "./components/ProjectCard";
 import { projects } from "./data/projects";
 import TechStack from "./components/TechStack";
+import Footer from "./components/footer";
+import Contact from "./components/Contact"
 
 function App() {
   return (
@@ -10,14 +12,14 @@ function App() {
       <Navbar />
 
       {/* HERO */}
-      <div className="container" style={{ padding: "100px 0" }}>
-        <h1 className="dev-name">Leogelio Gabriel</h1>
-        <p className="subtitle">
-          Aspiring Full Stack Developer
-        </p>
-
-        <TechStack />
-
+      <div className = "hero-mobile-wrapper">
+        <div className="container" style={{ padding: "100px 0" }}>
+          <h1 className="dev-name">Leogelio Gabriel</h1>
+          <p className="subtitle">
+            Aspiring Full Stack Developer
+          </p>
+          <TechStack />
+        </div>
       </div>
 
       {/* ABOUT */}
@@ -38,6 +40,11 @@ function App() {
           <ProjectCard key={index} project={project} />
         ))}
       </Section>
+
+      <Contact />
+
+      <Footer />
+      
     </>
   );
 }

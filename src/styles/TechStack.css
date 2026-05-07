@@ -1,0 +1,50 @@
+/* =========================
+   TECH STACK
+========================= */
+.tech-stack {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.stack-section {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.techs-title,
+.tools-title {
+  font-size: 17.5px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Icons */
+.svg-icon {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+.tech-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32.5px;
+  margin-bottom: 10px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, color 0.2s ease;
+  opacity: 0.65;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  color: #fff;
+}
