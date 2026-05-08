@@ -99,7 +99,7 @@ a {
   .section {
     mask-image: none;
     -webkit-mask-image: none;
-    padding: 100px 0;
+    padding: 65px 0;
   }
 
   .hero-mobile-wrapper {
