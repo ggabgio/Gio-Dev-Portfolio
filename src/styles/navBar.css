@@ -41,27 +41,23 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
 
-  background-image: linear-gradient(
-    to right, rgba(255,255,255,0.3) 150px, transparent 150px
-  );
-
-  background-size: 150px 1px;
-  background-repeat: repeat-x;
+  background: rgba(255, 255, 255, 0.3);
 
   mask-image: linear-gradient(
-    to right, 
+    to right,
     transparent 0%,
-    black 20%,
-    black 80%,
+    black 15%,
+    black 85%,
     transparent 100%
   );
-  
+
   -webkit-mask-image: linear-gradient(
-    to right, transparent 0%,
-    black 20%,
-    black 80%,
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
     transparent 100%
   );
 }

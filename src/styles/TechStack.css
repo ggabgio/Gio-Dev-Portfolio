@@ -48,3 +48,23 @@
   transform: translateY(-5px);
   color: #fff;
 }
+
+@media (max-width: 1024px) {
+  
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.tech-stack img, 
+.tech-stack svg {
+ 
+  width: clamp(30px, 10vw, 35px); 
+  height: auto;
+}
+  
+}

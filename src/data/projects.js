@@ -22,7 +22,7 @@ export const projects = [
     description: `WISP-SIMULATOR is a 3D first-person game-based training and assessment system designed for Wireless Internet Service Providers (WISPs).
     
     It provides a virtual environment where users can learn, practice, and evaluate real-world WISP installation and maintenance procedures without requiring physical equipment.`,
-    tech: ["C#", "Firebase", "Unity Game Engine"],
+    tech: ["C#", "Firebase", "Unity"],
     images: [wispImg3, wispImg2, wispImg, wispImg4, wispImg5, wispImg6, wispImg7, wispImg8],
     github: "https://github.com/ggabgio/WISP-SIMULATOR",
     youtube: "https://youtu.be/xPAjKFVzRaY"
