@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
-import Section from "./components/Section";
-import ProjectCard from "./components/ProjectCard";
+import Navbar from "./components/navBar";
+import Section from "./components/section";
+import ProjectCard from "./components/projectCard";
 import { projects } from "./data/projects";
 import TechStack from "./components/TechStack";
 import Footer from "./components/footer";
